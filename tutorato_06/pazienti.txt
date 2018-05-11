@@ -1,5 +1,5 @@
-Daniele 30 40
-Luca 48 25
-Francesca 50 60
-Melania 45 10
-Paolo 80 90
+Daniele;30;40
+Luca;48;25
+Francesca;50;60
+Melania;45;1000000
+Paolo;80;9000000
