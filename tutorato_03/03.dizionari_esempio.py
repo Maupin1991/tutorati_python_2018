@@ -13,6 +13,3 @@ print d1
 d1['Nome'] = "Anastasia"
 print d1
 
-
-'https://python-informatica-1.appspot.com/'
-'https://ryanstutorials.net/binary-tutorial/'

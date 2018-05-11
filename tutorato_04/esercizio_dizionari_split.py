@@ -1,4 +1,4 @@
-stringa_diz = "nome:sss,cognome:cxc"
+stringa_diz = "nome:Marta,cognome:Maaaa"
 
 stringa_split_virgola = stringa_diz.split(',')
 

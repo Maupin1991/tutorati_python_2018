@@ -77,7 +77,6 @@ def allerta(lista_di_pazienti):
 
         # print nome, valuta_paziente(peso, quant)
         if not valuta_paziente(peso, quant):
-            # il paziente e' a rischio
             f.write(nome)
             f.write("\n")
 
