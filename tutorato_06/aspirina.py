@@ -19,3 +19,32 @@ inferiore o uguale a quella ingerita, False altrimenti.
 su file "a_rischio.txt" il nome dei pazienti che hanno assunto una dose di farmaco
 superiore a quella sostenibile e quindi sono a rischio di decesso.
 '''
+
+
+def leggi_file():
+    """
+    ricevendo in ingresso una stringa contenente il nome
+    del file con la lista dei pazienti e relativi peso e dose ingerita, memorizzi tali valori
+    in una lista di liste che restituisce in uscita
+    """
+    pass
+
+
+def valuta_paziente():
+    """
+    ricevendo in ingresso il peso corporeo e la
+    quantita' di farmaco ingerita in un giorno da un paziente, calcola la massima
+    quantita' in mg che il paziente puo' ingerire attraverso la relazione fornita sopra
+    (massimaquantita=500*peso corporeo) e restituisce True se questa quantita' e'
+    inferiore o uguale a quella ingerita, False altrimenti.
+    """
+    pass
+
+
+def allerta():
+    """
+    ricevendo in ingresso la lista dei pazienti e i loro dati, scrive
+    su file "a_rischio.txt" il nome dei pazienti che hanno assunto una dose di farmaco
+    superiore a quella sostenibile e quindi sono a rischio di decesso
+    """
+    pass
