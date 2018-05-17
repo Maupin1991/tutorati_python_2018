@@ -40,7 +40,7 @@ def calcolaIntegrale():
     una lista contente i relativi integrali, per ogni t, secondo la definizione
 
 
-        i(x) = somma( f(x) * h )
+        i(x) = i(x-1) + ( f(x) * h )
 
     dove h e' la distanza tra due campioni consecutivi.
 
