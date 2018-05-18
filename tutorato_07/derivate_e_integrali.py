@@ -14,7 +14,7 @@ in una lista di liste.
 import matplotlib.pyplot as plt
 
 
-def leggiDati():
+def leggiDati(nomefile):
     """
     riceve in ingresso il nome di un file e restituisce una lista di coppie di
     valori [t, f(t)]
@@ -27,40 +27,55 @@ def leggiDati():
     4.0 12.0
     """
 
-    pass
+    f = open(nomefile, 'r')
+    lista = []
+
+    linea = f.readline()
+    while linea != "":
+        s = linea.split()
+        s[0] = float(s[0])
+        s[1] = float(s[1])
+
+        lista = lista + [s]
+        linea = f.readline()
+    f.close()
+    return lista
 
 
-def calcolaDerivata():
+lista_di_punti = leggiDati("dati.txt")
+print lista_di_punti
+
+
+def calcolaDerivata(lista):
     """
     riceve in ingresso una lista formata dalle coppie [t, f(t)] e restituisce
-    una lista contente le relative derivate, per ogni t, secondo la definizione
-
-                      f(x) - f(x+h)
-        d(x) =        -------------
-                             h
-
-    dove h e' la distanza tra due campioni consecutivi.
-
-
+    una lista contente le relative derivate, per ogni t
     """
+    derivate=[]
+    i=1
+    while i<len(lista):
+        d=(lista[i][1]-lista[i-1][1])/(lista[i][0]-lista[i-1][0])
+        derivate=derivate+[d]
+        i=i+1
+    return derivate
 
-    pass
 
-
-def calcolaIntegrale():
+def calcolaIntegrale(lista):
     """
     riceve in ingresso una lista formata dalle coppie [t, f(t)] e restituisce
-    una lista contente i relativi integrali, per ogni t, secondo la definizione
-
-        i(0) = 0
-        i(x) = i(x-1) + ( f(x) * h )
-
-    dove h e' la distanza tra due campioni consecutivi.
-
-
+    una lista contente i relativi integrali, per ogni t.
     """
+    integrale=[0]
+    integ=0.0
+    k=1
+    while k<len(lista):
+        integ = integ +lista[k][1]*(lista[k][0]-lista[k-1][0])
+        integrale=integrale+[integ]
+        k=k+1
 
-    pass
+    return integrale
+
+
 
 
 def salvaDati():
