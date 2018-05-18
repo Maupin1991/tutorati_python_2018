@@ -39,7 +39,7 @@ def calcolaIntegrale():
     riceve in ingresso una lista formata dalle coppie [t, f(t)] e restituisce
     una lista contente i relativi integrali, per ogni t, secondo la definizione
 
-
+        i(0) = 0
         i(x) = i(x-1) + ( f(x) * h )
 
     dove h e' la distanza tra due campioni consecutivi.
