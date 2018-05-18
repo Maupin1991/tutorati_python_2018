@@ -1,3 +1,16 @@
+"""
+Scrivere un programma Python che legge da file
+"funzione.txt", una sequenza di coppie t, f(t), dove t
+rappresenta l'istante di tempo nel quale e' stato
+campionata una certa misura f(t) (si pensi per esempio
+al segnale vocale visto a lezione, un segnale di tensione
+o di corrente, di potenza dissipata e cosi via). Le coppie
+lette, che nel file sono separate dal carattere "a capo"
+(quindi due valori per riga), devono essere memorizzate
+in una lista di liste.
+"""
+
+# ci serve per fare i grafici
 import matplotlib.pyplot as plt
 
 
@@ -8,10 +21,10 @@ def leggiDati():
 
     esempio di file:
 
-    1.0, 2.0
-    2.0, 5.0
-    3.0, 7.0
-    4.0, 12.0
+    1.0 2.0
+    2.0 5.0
+    3.0 7.0
+    4.0 12.0
     """
 
     pass
