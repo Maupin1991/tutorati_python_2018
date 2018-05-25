@@ -78,13 +78,16 @@ def calcolaIntegrale(lista):
 
 
 
-def salvaDati():
+def salvaDati(t, ft, d, i):
     """
     riceve in ingresso una linea con la tripla formata dai valori [t, d(f(t)), i(f(t))]
     (t, derivata di f(t), integrale di f(t)], li salva, riga per riga, nel file "elaborazione.txt".
+    Scrive una riga alla volta (il file va aperto in modalita' append)
     """
-
-    pass
+    f = open("elaborazione.txt", 'a')
+    f.write(",".join([str(t), str(ft), str(d), str(i)]))
+    f.write("\n")
+    f.close()
 
 
 def grafico(t, ft):
@@ -113,3 +116,13 @@ def scatter_plot(t, ft):
         return
     plt.scatter(t, ft)
     plt.show()
+
+def main():
+    lista_di_punti = leggiDati("dati.txt")
+    derivate = calcolaDerivata(lista_di_punti)
+    integrali = calcolaIntegrale(lista_di_punti)
+    for indice in range(len(lista_di_punti) - 1):
+        salvaDati(lista_di_punti[indice][0], lista_di_punti[indice][1],
+                  derivate[indice], integrali[indice])
+
+main()
